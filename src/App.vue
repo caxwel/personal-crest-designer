@@ -1,19 +1,21 @@
 <template>
-    <div id="app" v-cloak>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <div class="row">
-        <div class="large-12 columns">
+    <div id="app">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <div class="help">
+        <div class="question-box">
             <h1>{{ quiz.title }}</h1>
-            <div class="callout">
+            <div class="question-block">
                 <div v-for="(question, index) in quiz.questions" :key="question.id">
-          <!-- Hide all questions, show only the one with index === to current question index -->
+
                 <div v-show="index === questionIndex">
                 <h3>{{ question.text }}</h3>
                 <ul>
-              <!-- for each response of the current question -->
+
                     <li v-for="response in question.responses" :key="response.id">
                         <label>
                         <input type="radio" 
+                        class="answerlist"
                         v-bind:value="response.value" 
                         v-bind:name="index" 
                         v-model="userResponses[index]"
@@ -23,23 +25,18 @@
                 </ul>
           </div>
         </div>
-
-        <!-- Last page, quiz is finished, display result -->
         <div v-show="questionIndex === quiz.questions.length">
-          <h3>Your Results</h3>
-          <p>
-            You are: {{ crest() }}
-          </p>
-        </div>
-      </div>
+        <p>You are: {{ crest() }}</p>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
+    </div>
+    </div>
 </template>
 
 <script>
-//import Start from './components/Start.vue'
 import quiz from "./quiz.js";
+
 
 export default {
   name: 'app',
@@ -57,7 +54,6 @@ methods: {
     },
     crest: function() {
         let results = [];
-        // let maxCount = 1;
         for (let i = 0; i < this.userResponses.length; i++) {
             let el = this.userResponses[i];
             results.push(el);
@@ -69,17 +65,56 @@ methods: {
 </script>
 
 <style>
-#app {
-  font-family: 'Courier New', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #fff;
-  background-color: #000;
-  margin-top: 60px;
+ .question-box {
+    text-align: center;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Old Standard TT', serif; 
+
+} 
+
+.question-block {
+    padding-top: 25px;
+    padding-bottom: 0px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
 }
 
 ul {
     list-style-type: none;
+    margin-left: -30px;
 }
+
+.answerlist {
+    display:none;
+}
+
+label:hover {
+        text-transform: uppercase;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("./media/ermine.jpg");
+    background-repeat: repeat;
+}
+
+.help {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 </style>

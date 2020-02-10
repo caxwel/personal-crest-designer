@@ -1,122 +1,122 @@
 const quiz = {
-    title: "To wear:",
+    title: "TO WEAR INTO BATTLE",
 
     questions: [{
             id: 1,
-            text: "What is your name?",
+            text: "WHAT IS YOUR NAME?",
             responses: [{
                     id: "a",
-                    text: "Secret",
+                    text: "secret",
                     value: "Per Fess"
                 },
                 {
                     id: "b",
-                    text: "Given",
+                    text: "given",
                     value: "Quarterly"
                 },
                 {
                     id: "c",
-                    text: "Chosen",
+                    text: "chosen",
                     value: "Per Chevron"
                 },
                 {
                     id: "d",
-                    text: "Inherent",
+                    text: "inherent",
                     value: "Per Saltire"
                 },
                 {
                     id: "e",
-                    text: "Translated",
+                    text: "translated",
                     value: "Per Bend"
                 }
             ]
         },
         {
             id: 2,
-            text: "What have you made?",
+            text: "WHAT HAVE YOU MADE?",
             responses: [{
                     id: "a",
-                    text: "Peace",
+                    text: "peace",
                     value: "Silver"
                 },
                 {
                     id: "b",
-                    text: "Friends",
+                    text: "friends",
                     value: "Blue"
                 },
                 {
                     id: "c",
-                    text: "Amends",
+                    text: "amends",
                     value: "Purple"
                 },
                 {
                     id: "d",
-                    text: "Time",
+                    text: "time",
                     value: "Gold"
                 },
                 {
                     id: "e",
-                    text: "Trouble",
+                    text: "trouble",
                     value: "Black"
                 }
             ]
         },
         {
             id: 3,
-            text: "What have you done?",
+            text: "WHAT HAVE YOU DONE?",
             responses: [{
                     id: "a",
-                    text: "Fought",
+                    text: "fought",
                     value: "Red" //change
                 },
                 {
                     id: "b",
-                    text: "Decided",
+                    text: "decided",
                     value: "Blue"
                 },
                 {
                     id: "c",
-                    text: "Given",
+                    text: "given",
                     value: "Gold" //change
                 },
                 {
                     id: "d",
-                    text: "Hoped",
+                    text: "hoped",
                     value: "Green"
                 },
                 {
                     id: "e",
-                    text: "Grieved",
+                    text: "grieved",
                     value: "Black"
                 }
             ]
         },
         {
             id: 4,
-            text: "Give yourself a gift.",
+            text: "GIVE YOURSELF A GIFT.",
             responses: [{
                     id: "a",
-                    text: "Book",
+                    text: "book",
                     value: "Deer"
                 },
                 {
                     id: "b",
-                    text: "Power",
+                    text: "power",
                     value: "Eagle" 
                 },
                 {
                     id: "c",
-                    text: "Pillow",
+                    text: "pillow",
                     value: "Badger" //change
                 },
                 {
                     id: "d",
-                    text: "Flight",
+                    text: "flight",
                     value: "Lion"
                 },
                 {
                     id: "e",
-                    text: "Five More Minutes",
+                    text: "five more minutes",
                     value: "Dragon"
                 }
             ]
