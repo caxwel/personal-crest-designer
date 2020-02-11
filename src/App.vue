@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <div class="help">
         <div class="question-box">
             <h1>{{ quiz.title }}</h1>
@@ -27,6 +27,9 @@
         </div>
         <div v-show="questionIndex === quiz.questions.length">
         <p>You are: {{ crest() }}</p>
+        <myCanvas v-bind:userResponses="userResponses">
+            <crestDrawing v-bind:userResponses="userResponses" />
+        </myCanvas>
     </div>
     </div>
     </div>
@@ -36,29 +39,29 @@
 
 <script>
 import quiz from "./quiz.js";
-
+import Canvas from "./component/Canvas.vue";
+import Drawing from "./component/Drawing.vue";
 
 export default {
-  name: 'app',
+  name: "app",
+  components: {
+      myCanvas: Canvas,
+      crestDrawing: Drawing
+  },
   data: function() {
-      console.log(quiz);
-return {
-    quiz: quiz,
-    questionIndex: 0,
-    userResponses: Array(),
-  };
-},
-methods: {
+    return {
+        quiz: quiz,
+        title: "Personal Crest",
+        questionIndex: 0,
+        userResponses: Array(),
+    };
+    },
+  methods: {
     next: function() {
             this.questionIndex++;
     },
     crest: function() {
-        let results = [];
-        for (let i = 0; i < this.userResponses.length; i++) {
-            let el = this.userResponses[i];
-            results.push(el);
-        }
-        return results.join(", ");
+        return this.userResponses;
     }
 }
 }

@@ -1,5 +1,5 @@
 const quiz = {
-    title: "TO WEAR INTO BATTLE",
+    title: "WEAR THIS INTO BATTLE",
 
     questions: [{
             id: 1,
