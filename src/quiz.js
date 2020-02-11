@@ -12,7 +12,7 @@ const quiz = {
                 {
                     id: "b",
                     text: "given",
-                    value: "Quarterly"
+                    value: "Tierced in Fess"
                 },
                 {
                     id: "c",
@@ -27,7 +27,7 @@ const quiz = {
                 {
                     id: "e",
                     text: "translated",
-                    value: "Per Bend"
+                    value: "Per Pale"
                 }
             ]
         },

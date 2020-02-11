@@ -2,6 +2,7 @@
     <div id="app">
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{{ title }}</title>
         <div class="help">
         <div class="question-box">
             <h1>{{ quiz.title }}</h1>
@@ -26,7 +27,8 @@
           </div>
         </div>
         <div v-show="questionIndex === quiz.questions.length">
-        <p>You are: {{ crest() }}</p>
+            <h3>YOU HAVE BEEN ASSIGNED:</h3>
+        <p>{{ crest() }}</p>
         <myCanvas v-bind:userResponses="userResponses">
             <crestDrawing v-bind:userResponses="userResponses" />
         </myCanvas>
@@ -61,7 +63,8 @@ export default {
             this.questionIndex++;
     },
     crest: function() {
-        return this.userResponses;
+        const description = `a ${this.userResponses[1]} and ${this.userResponses[2]} crest in the ${this.userResponses[0]} style featuring a ${this.userResponses[3]}.`
+        return description;
     }
 }
 }
