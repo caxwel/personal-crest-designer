@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{{ title }}</title>
         <div class="help">
@@ -76,7 +76,7 @@ export default {
     color: #000;
     display: flex;
     flex-direction: column;
-    font-family: 'Old Standard TT', serif; 
+    font-family: 'EB Garamond', serif; 
 
 } 
 

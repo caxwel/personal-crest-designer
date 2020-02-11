@@ -146,21 +146,19 @@ export default {
 
         //chooses image
         const drawnImg = new Image();
-        drawnImg.style.width = "50%";
-        drawnImg.style.height = "auto";
         if (this.userResponses[3] === "Deer") {
-            drawnImg.src = "/src/media/deer.png";
+            drawnImg.src = require("../assets/deer1.png");
         } else if (this.userResponses[3] === "Eagle") {
-            drawnImg.src = "/src/media/eagle.png";
+            drawnImg.src = require("../assets/eagle1.png");
         } else if (this.userResponses[3] === "Badger") {
-            drawnImg.src = "/src/media/badger.png";
+            drawnImg.src = require("../assets/badger1.png");
         } else if (this.userResponses[3] === "Lion") {
-            drawnImg.src = "/src/media/lion.png";
+            drawnImg.src = require("../assets/lion1.png");
         } else if (this.userResponses[3] === "Dragon") {
-            drawnImg.src = "/src/media/dragon.png";
+            drawnImg.src = require("../assets/dragon1.png");
         }
         drawnImg.onload = () => {
-        ctx.drawImage(drawnImg, 0, 0);
+        ctx.drawImage(drawnImg, 55, 90);
         }
     }
 }
