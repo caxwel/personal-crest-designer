@@ -110,7 +110,7 @@ html, body {
 }
 
 body {
-    background-image: url("./media/ermine.jpg");
+    background-image: url("./assets/ermine.jpg");
     background-repeat: repeat;
 }
 
