@@ -23,7 +23,7 @@ yarn
 ```
 2. Investigate
 ```
-yarn serve
+yarn start
 ```
 
 This app/generator is entirely frontend, so you'll find setup takes very little effort.

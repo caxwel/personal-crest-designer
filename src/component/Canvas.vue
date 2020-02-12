@@ -13,6 +13,7 @@ export default {
     },
     data: function() {
         return {
+            show: true,
             provider: {
                 context: null
             }
@@ -30,5 +31,7 @@ export default {
 </script>
 
 <style scoped>
-
+ canvas {
+     margin-top: -30px;
+ }
 </style>
